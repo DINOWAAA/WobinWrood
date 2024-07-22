@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CollectableCollision : MonoBehaviour
 {
-    void OnCollisionEnter(Collision other) 
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            Debug.Log("collected");
+            Debug.Log("Collected");
+            Destroy(gameObject);
         }    
     }
 }

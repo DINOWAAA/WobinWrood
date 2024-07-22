@@ -4,40 +4,37 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Player speed Cont
-    public int playerSpeed;
+    // Player speed
+    private Rigidbody2D rb;
+    public float playerSpeed;
+    public GameObject playerSprite;
 
-    //Player animator
-    //public Animator pAnimator
+    Vector2 movement;
 
-
-
-    private void Start() 
+    private void Start()
     {
-        //Sets initial Speed of player when game starts
-        playerSpeed = 5;
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        // Sets initial speed of player when game starts
+        playerSpeed = 5f;
     }
 
-    void Update()
+    void Update() 
     {
-    Vector3 direction = new Vector3(0, 0, 0);
-        if (Input.GetKey(KeyCode.W))
-        {
-            direction.y = playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            direction.y = -playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            direction.x = playerSpeed;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            direction.x = -playerSpeed;
-        }
-        direction = Vector3.ClampMagnitude(direction, playerSpeed);
-        transform.position += direction * Time.deltaTime;
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
+
+    private void FixedUpdate() 
+    {
+        rb.MovePosition(rb.position + movement * playerSpeed * Time.fixedDeltaTime);
+
+        if (movement.x < 0)
+        {
+            playerSprite.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (movement.x > 0)
+        {
+            playerSprite.gameObject.transform.localScale = new Vector3(1, 1, 1);
+        }
+    }    
 }

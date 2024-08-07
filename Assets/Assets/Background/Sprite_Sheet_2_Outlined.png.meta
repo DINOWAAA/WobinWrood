@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aee4070432c2e0643a39de7169f01262
+guid: 2470758baf21901488a2bfe00b1c74cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sprite_Sheet_2_Alive_Trees_0
+      name: Sprite_Sheet_2_Outlined_0
       rect:
         serializedVersion: 2
-        x: 182
-        y: 161
-        width: 598
-        height: 780
+        x: 257
+        y: 134
+        width: 571
+        height: 837
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 092624a042e06c945bb29d296bfbfa2a
-      internalID: 497946923
+      spriteID: 0d0a5233fab551d4bbb47550dc27348f
+      internalID: 414566309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sprite_Sheet_2_Alive_Trees_1
+      name: Sprite_Sheet_2_Outlined_1
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 149
-        width: 665
-        height: 793
+        x: 1128
+        y: 138
+        width: 600
+        height: 818
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39846e6cb9779b243927dfb488b0d4fd
-      internalID: 1505293355
+      spriteID: dc33fac40b271914890420518acb9650
+      internalID: -485787695
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite_Sheet_2_Alive_Trees_0: 497946923
-      Sprite_Sheet_2_Alive_Trees_1: 1505293355
+      Sprite_Sheet_2_Outlined_0: 414566309
+      Sprite_Sheet_2_Outlined_1: -485787695
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

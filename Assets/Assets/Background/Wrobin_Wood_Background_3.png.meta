@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7cea6705ce8d38d41bf30ca6d35df8b4
+guid: 465d030899d6d984b87ecdc5cf0e4868
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,70 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Sprite_Sheet_3_Dead_Trees_0
-      rect:
-        serializedVersion: 2
-        x: 1468
-        y: 696
-        width: 393
-        height: 326
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54e95ee403a816d488216b032c388c64
-      internalID: -1785532749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Sheet_3_Dead_Trees_1
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 361
-        width: 570
-        height: 683
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 765b59e854adeb1439e5756ddd9b3703
-      internalID: -2037071956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sprite_Sheet_3_Dead_Trees_2
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 23
-        width: 726
-        height: 716
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51320bef7f1e82f47b01ff9dbff247cb
-      internalID: 991041214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -182,10 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Sprite_Sheet_3_Dead_Trees_0: -1785532749
-      Sprite_Sheet_3_Dead_Trees_1: -2037071956
-      Sprite_Sheet_3_Dead_Trees_2: 991041214
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

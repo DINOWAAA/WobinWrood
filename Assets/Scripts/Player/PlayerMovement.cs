@@ -67,11 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement.x < 0)
         {
-            playerSprite.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            playerSprite.gameObject.transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
         }
         else if (movement.x > 0)
         {
-            playerSprite.gameObject.transform.localScale = new Vector3(1, 1, 1);    
+            playerSprite.gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);    
         }
     }    
 }

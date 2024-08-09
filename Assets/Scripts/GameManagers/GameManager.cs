@@ -12,14 +12,18 @@ public class GameManager : MonoBehaviour
     public GameObject tutorialCanvas;
     [SerializeField] GameObject gameEndCanvas;
     public TextMeshProUGUI weightNumber;
-    int collectedAmount;
+    int weightAmount;
     public TextMeshProUGUI currentTimer;
 
     float remainingTimer;
     public float startTimerAmount;
 
+    public float currentBackPackWeight;
     public bool gameRunning;
     bool roundOver = false;
+
+    PlayerMovement playerMovement;
+    public GameObject player;
 
     void Awake ()
     {
@@ -32,16 +36,26 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerMovement = player.GetComponent<PlayerMovement>();
         remainingTimer = startTimerAmount;
         //testinggamestart
         //gameRunning = true;
-        collectedAmount = 0;
+        weightAmount = 0;
     }
-    public void CollectedObject(int score)
+    public void CollectedObject(int Weight)
     {
-        collectedAmount += score;
+        weightAmount += Weight;
+        currentBackPackWeight += Weight;
+        
+        playerMovement.UpdateWeight(currentBackPackWeight);
     }
 
+    public void EmptyWeight()
+    {
+        weightAmount = 0;
+        currentBackPackWeight = 0f;
+        playerMovement.EmptyBackPack();
+    }
 
     public void GameStart()
     {
@@ -49,6 +63,7 @@ public class GameManager : MonoBehaviour
         tutorialCanvas.SetActive(false);
         Time.timeScale = 1f;
     }
+    
     void GameEnd()
     {
         print("timer Finished");
@@ -66,7 +81,7 @@ public class GameManager : MonoBehaviour
             int seconds = Mathf.FloorToInt(remainingTimer%60);
             currentTimer.text = string.Format("{0:00}:{1:00}",minutes, seconds);
 
-            weightNumber.text = collectedAmount.ToString();
+            weightNumber.text = weightAmount.ToString();
         }
         if (remainingTimer < 0f)
             {

@@ -6,18 +6,40 @@ public class PlayerMovement : MonoBehaviour
 {
     // Player speed
     private Rigidbody2D rb;
+    public float backPackWeight;
     public float playerSpeed;
     public float walkSpeed;
     public float sprintSpeed;
     public float crouchSpeed;
     public GameObject playerSprite;
 
+    public float currentBackPackWeight;
     Vector2 movement;
 
     private void Start()
     {
+        backPackWeight = 0f;
         rb = gameObject.GetComponent<Rigidbody2D>();
         // Sets initial speed of player when game starts
+        playerSpeed = 5f;
+    }
+
+    public void UpdateWeight(float backPackWeight)
+    {
+        currentBackPackWeight =+ backPackWeight;
+        if(currentBackPackWeight>=3f)
+        {
+            walkSpeed = 3f;
+        }
+        if(currentBackPackWeight<=2F)
+        {
+            walkSpeed = 5f;
+        }
+    }
+
+    public void EmptyBackPack()
+    {
+        currentBackPackWeight = 0f;
         walkSpeed = 5f;
     }
 
@@ -27,11 +49,11 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
         if(Input.GetButton("Crouch"))
         {
-            playerSpeed = crouchSpeed;
+            playerSpeed = walkSpeed - crouchSpeed;
         }
         if(Input.GetButton("Sprint"))
         {
-            playerSpeed = sprintSpeed;
+            playerSpeed = sprintSpeed + walkSpeed;
         }
         else
         {
@@ -45,11 +67,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (movement.x < 0)
         {
-            playerSprite.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            playerSprite.gameObject.transform.localScale = new Vector3(-0.2f, 0.2f, 0.2f);
         }
         else if (movement.x > 0)
         {
-            playerSprite.gameObject.transform.localScale = new Vector3(1, 1, 1);    
+            playerSprite.gameObject.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);    
         }
     }    
 }

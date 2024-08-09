@@ -28,9 +28,9 @@ public class GameManager : MonoBehaviour
     void Awake ()
     {
         gameRunning = false;
-        //Time.timeScale = 0f;
+        Time.timeScale = 0f;
         gameEndCanvas.SetActive(false);
-        //tutorialCanvas.SetActive(true);
+        tutorialCanvas.SetActive(true);
     }
     
     // Start is called before the first frame update
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         playerMovement = player.GetComponent<PlayerMovement>();
         remainingTimer = startTimerAmount;
         //testinggamestart
-        gameRunning = true;
+        //gameRunning = true;
         weightAmount = 0;
     }
     public void CollectedObject(int Weight)
@@ -57,13 +57,13 @@ public class GameManager : MonoBehaviour
         playerMovement.EmptyBackPack();
     }
 
-
     public void GameStart()
     {
         gameRunning = true;
         tutorialCanvas.SetActive(false);
         Time.timeScale = 1f;
     }
+    
     void GameEnd()
     {
         print("timer Finished");
